@@ -1,6 +1,10 @@
 # Neural Network: Classification
 Implementing a neural network with one hidden layer to classify a planar data-set which gives a better practical intuition about the working of a NN. 
 
+![NN](https://i0.wp.com/blog.eyewire.org/wp-content/uploads/2015/12/a-cute-neuron-crashcourse.png?fit=1200%2C594&ssl=1)
+
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -35,8 +39,7 @@ pip install matplotlib
 # What is a neural network?
 Neural networks are algorithm that mimics the activity of brain. A neuron gets the input signals through dentrites ang gives the output signal through axon terminal. To replicate the neuron model, we fabricate an imaginary model which consist of several neuron model and form the neural network. In a single neuron model we have input wires with a bias which is passed to an acitvation function to get the required output.
 
-![NN](https://i0.wp.com/blog.eyewire.org/wp-content/uploads/2015/12/a-cute-neuron-crashcourse.png?fit=1200%2C594&ssl=1)
-
+![NN](https://thumbs.gfycat.com/UnlinedBowedFattaileddunnart-max-1mb.gif)
 
 
 # How does it work?
