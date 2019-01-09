@@ -220,7 +220,7 @@ def nn_model(X, Y, n_h, num_iterations = 10000):
     b2 = parameters['b2']
     
     # Loop (gradient descent)
-
+    print('\n[1]Gradient Descent Algorithm...')
     for i in range(0, num_iterations):
          
         # Forward propagation. Inputs: "X, parameters". Outputs: "A2, cache".
@@ -235,9 +235,9 @@ def nn_model(X, Y, n_h, num_iterations = 10000):
         # Gradient descent parameter update. Inputs: "parameters, grads". Outputs: "parameters".
         parameters = update_parameters(parameters, grads)
         
-        if (i%5 == 0):
-            print('\nEpoch %i : Cost = %f' % (i,cost))
-        
+        if (i%1000 == 0):
+            print('Epoch %i : Cost = %f' % (i,cost))
+    print('[2]Parameters Optimized\n')
     return parameters
 
 def predict(parameters, X):
@@ -251,6 +251,7 @@ def predict(parameters, X):
     Returns
     predictions -- vector of predictions of our model (red: 0 / blue: 1)
     """
+    print('\n[3]Predicting...')
     A2, cache = forward_propagation(X, parameters)
     predictions = A2 
     predictions[predictions > 0.5] = 1
@@ -269,4 +270,5 @@ plt.show()
 
 # Analysing the accuracy of the model
 predictions = predict(parameters, X)
-print ('Accuracy: %d' % float((np.dot(Y,predictions.T) + np.dot(1-Y,1-predictions.T))/float(Y.size)*100) + '%')
+print('Prediction: ', predictions)
+print ('\nAccuracy= %d' % float((np.dot(Y,predictions.T) + np.dot(1-Y,1-predictions.T))/float(Y.size)*100) + '%')
